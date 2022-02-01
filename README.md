@@ -14,3 +14,4 @@ ACM Website revamped
 * [Sarthak Akre](https://github.com/sarthakakre27)
 * [Abhiuday Gupta](https://github.com/cp-Coder)
 * [Dweeja Reddy](https://github.com/DweejaReddy)
+* [sushant kogurwar](https://github.com/sushskvnitn)
