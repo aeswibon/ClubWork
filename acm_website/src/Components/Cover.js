@@ -7,20 +7,15 @@ import Contact from './UI/contacts/contact'
 function Cover() {
     return (
         <div>
-            <h1>ACM COVER PAGE</h1>
-            <h1>ACM COVER PAGE</h1>
-            <h1>ACM COVER PAGE</h1>
-            <h1>ACM COVER PAGE</h1>
-       
-            <h1>ACM COVER PAGE</h1>
-            <h1>ACM COVER PAGE</h1>
-            <h1>ACM COVER PAGE</h1>
-            <h1>ACM COVER PAGE</h1>
-       
-            <h1>ACM COVER PAGE</h1>
-            <h1>ACM COVER PAGE</h1>
+            
+            <h1 className='text-monospace'>ACM COVER PAGE</h1>
+            <div className='p-3 m-3'>
                 <Feature/>
+            </div>
+            <div>
                 <Contact/>
+            </div>
+                
             {/* <Link to="problem-list">ProblemSet</Link> */}
         </div>
     )

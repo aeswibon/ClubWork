@@ -1,10 +1,7 @@
 import React,{useEffect} from 'react';
 import Card from "./feature_card"
-
-
 import Aos from "aos";
 import "aos/dist/aos.css"
-
 
 function Feature() {
   useEffect(()=>{
@@ -12,20 +9,19 @@ function Feature() {
   },[])
     
   return<>
- 
-      <h1 className='text-center justify-content-center main-heading fw-bold'> Features</h1>
-   <div className='d-flex flex-wrap text-center justify-content-center ' >
-     <div data-aos="zoom-in-down" >
-     <Card title="CODEPEN"  info="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque perferendis sit impedit ipsum ad quisquam optio beatae molestias, deserunt quidem temporibus quibusdam suscipit delectus maxime qui nulla corporis? Facere ab dignissimos aspernatur aliquam eveniet. "  /> 
+      <h2 className='text-center justify-content-center main-heading fw-bold'>FEATURES</h2>
+   <div className='container d-flex flex-wrap text-center justify-content-center ' >
+     <div data-aos="flip-up"  >
+     <Card title="CODEPEN"  icon="fab fa-codepen"  info="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque perferendis sit impedit ipsum ad quisquam optio beatae molestias, deserunt quidem temporibus quibusdam suscipit delectus maxime qui nulla corporis? Facere ab dignissimos aspernatur aliquam eveniet. "  /> 
      </div>
-     <div data-aos="zoom-in-down" >
-     <Card  title="CODEPEN"  info="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque perferendis sit impedit ipsum ad quisquam optio beatae molestias, deserunt quidem temporibus quibusdam suscipit delectus maxime qui nulla corporis? Facere ab dignissimos aspernatur aliquam eveniet. "  /> 
+     <div data-aos="flip-up" >
+     <Card  title="DISCUSSION FORUM" icon="fas fa-user-friends" info="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque perferendis sit impedit ipsum ad quisquam optio beatae molestias, deserunt quidem temporibus quibusdam suscipit delectus maxime qui nulla corporis aliquam"  /> 
      </div>
-     <div data-aos="zoom-in-down">
-     <Card  title="CODEPEN"  info="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque perferendis sit impedit ipsum ad quisquam optio beatae molestias, deserunt quidem temporibus quibusdam suscipit delectus maxime qui nulla corporis? Facere ab dignissimos aspernatur aliquam eveniet. "  /> 
+     <div data-aos="flip-up">
+     <Card  title="INTERVIEW QUESTIONS " icon="fas fa-comments" info="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque perferendis sit impedit ipsum ad quisquam optio beatae molestias, deserunt quidem temporibus quibusdam suscipit delectus maxime qui nulla corporis aliquam"  /> 
      </div>
-     <div data-aos="zoom-in-down" >
-     <Card  title="CODEPEN"   info="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque perferendis sit impedit ipsum ad quisquam optio beatae molestias, deserunt quidem temporibus quibusdam suscipit delectus maxime qui nulla corporis? Facere ab dignissimos aspernatur aliquam eveniet. "  /> 
+     <div data-aos="flip-up" >
+     <Card  title="CODE COMPILER"  icon="fas fa-code" info="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque perferendis sit impedit ipsum ad quisquam optio beatae molestias, deserunt quidem temporibus quibusdam suscipit delectus maxime qui nulla corporis? Facere ab dignissimos aspernatur aliquam eveniet. "  /> 
      </div>
     </div>
   </>;
