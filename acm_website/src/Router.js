@@ -1,6 +1,6 @@
 import React from "react";
 import {Route, Routes, BrowserRouter} from "react-router-dom";
-// import Cover from "./Components/Cover";
+import Cover from "./Components/Cover";
 // import OnlineCompiler from "./Components/online-compiler/OnlineCompiler";
 // import ProblemDetails from "./Components/problems/ProblemDetails";
 // import ProblemList from "./Components/problems/ProblemList";
@@ -14,7 +14,8 @@ function SiteRouter() {
     return (
         <BrowserRouter>
             <Routes>
-                {/* <Route path="/" exact element={<Cover />} /> */}
+                
+                <Route path="/" exact element={<Cover />} />
                 {/* <Route path="/login" exact element={<LoginPage />} /> */}
                 {/* <Route
                     path="/home"
