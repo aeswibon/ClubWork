@@ -112,7 +112,7 @@ function Contact() {
                         id="flexCheckChecked"
                       />
                       <label
-                         className="form-check-label" data-aos="flip-up"
+                         className="form-check-label" data-aos="fade-up"
                         
                       >
                         I agree that the ACM Team may contact me at the email
