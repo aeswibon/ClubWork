@@ -2,7 +2,6 @@ import React from "react";
 import Feature from "./UI/features/feature";
 import Contact from "./UI/contacts/contact";
 import styles from "./Cover.module.css";
-import { useEffect } from "react";
 // import particlesJS from "../Components/UI/particles";
 // import {Link} from 'react-router-dom'
 import Particles from "react-tsparticles";
@@ -34,7 +33,7 @@ function Cover() {
       <h1 className="text-monospace">ACM COVER PAGE</h1>
       <h1 className="text-monospace">ACM COVER PAGE</h1>
       <div className={styles.particles}>
-        <Particles
+        {/* <Particles
           id="tsparticles"
           init={particlesInit}
           loaded={particlesLoaded}
@@ -115,7 +114,7 @@ function Cover() {
             },
             detectRetina: true,
           }}
-        />
+        /> */}
       </div>
 
       <div className="p-3 m-3">
