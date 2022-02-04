@@ -2,24 +2,24 @@ import React from "react";
 import Feature from "./UI/features/feature";
 import Contact from "./UI/contacts/contact";
 import styles from "./Cover.module.css";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 // import particlesJS from "../Components/UI/particles";
 // import {Link} from 'react-router-dom'
-import Particles from "react-tsparticles";
+// import Particles from "react-tsparticles";
 import Footer from "./UI/Footer";
 import Header from "./UI/Header";
 import GoTop from "./UI/GoTop";
 
 function Cover() {
-  const particlesInit = (main) => {
-    console.log(main);
+  // const particlesInit = (main) => {
+  //   console.log(main);
 
-    // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
-  };
+  //   // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
+  // };
 
-  const particlesLoaded = (container) => {
-    console.log(container);
-  };
+  // const particlesLoaded = (container) => {
+  //   console.log(container);
+  // };
 
   return (
     <React.Fragment>
