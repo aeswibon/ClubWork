@@ -5,6 +5,9 @@ import styles from "./Cover.module.css";
 // import particlesJS from "../Components/UI/particles";
 // import {Link} from 'react-router-dom'
 import Particles from "react-tsparticles";
+import Footer from "./UI/Footer";
+import Header from "./UI/Header";
+import GoTop from "./UI/GoTop";
 
 function Cover() {
   const particlesInit = (main) => {
@@ -18,20 +21,12 @@ function Cover() {
   };
 
   return (
-    <div>
+    <React.Fragment>
+      <Header />
+      <GoTop />
       <h1 className="text-center justify-content-center  main-heading fw-bold">
         ACM COVER PAGE
       </h1>
-      <h1 className="text-monospace">ACM COVER PAGE</h1>
-      <h1 className="text-monospace">ACM COVER PAGE</h1>
-      <h1 className="text-monospace">ACM COVER PAGE</h1>
-      <h1 className="text-monospace">ACM COVER PAGE</h1>
-      <h1 className="text-monospace">ACM COVER PAGE</h1>
-      <h1 className="text-monospace">ACM COVER PAGE</h1>
-      <h1 className="text-monospace">ACM COVER PAGE</h1>
-      <h1 className="text-monospace">ACM COVER PAGE</h1>
-      <h1 className="text-monospace">ACM COVER PAGE</h1>
-      <h1 className="text-monospace">ACM COVER PAGE</h1>
       <div className={styles.particles}>
         {/* <Particles
           id="tsparticles"
@@ -123,9 +118,9 @@ function Cover() {
       <div>
         <Contact />
       </div>
-
+      <Footer />
       {/* <Link to="problem-list">ProblemSet</Link> */}
-    </div>
+    </React.Fragment>
   );
 }
 

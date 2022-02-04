@@ -10,7 +10,7 @@ function Feature() {
 
   return (
     <>
-      <h2 className="text-center justify-content-center  main-heading fw-bold" data-aos="fade-right" >
+      <h2 className="text-center justify-content-center  main-heading fw-bold" data-aos="fade-right" id="features" >
         FEATURES
       </h2>
       <div className="container d-flex flex-wrap text-center justify-content-center ">
