@@ -11,7 +11,7 @@ function Contact() {
 
   return (
     <>
-      <section className=" container p-3" >
+      <section className=" container p-3" id="contact">
         <div className="container">
           <div className="row">
             <div className="col-12 col-lg-10 mx-auto">

@@ -1,4 +1,135 @@
 .particles {
-  position: absolute !important;
-  z-index: -1;
+	position: absolute !important;
+	z-index: -1;
+}
+.navbar-bg {
+	background-color: var(--bgcolor);
+	padding: 2rem 0;
+	z-index: 99;
+	position: relative;
+}
+
+.navbar-brand {
+	font-size: 1.5rem;
+	padding-left: 1cm;
+}
+
+.navbar li {
+	padding: 0 2rem;
+}
+
+.navbar li a {
+	font-weight: lighter;
+	position: relative;
+}
+
+.navbar li a:hover {
+	color: var(--primary-color) !important;
+	text-shadow: 0 0.2rem 0.3rem rgba(183, 171, 255, 0.5);
+}
+
+.btn-style {
+	width: 10rem;
+	height: 3rem;
+	border-radius: 2rem;
+	color: #fff;
+	background-color: var(--primary-color);
+	text-transform: capitalize;
+}
+
+.btn-style:first-child {
+	margin-right: 2rem;
+}
+
+.btn-style:hover {
+	border: 0.1rem solid var(--primary-color);
+	background-color: transparent;
+	color: var(--primary-color);
+	box-shadow: 0 0.2rem 0.5rem rgba(183, 171, 255, 0.5);
+}
+
+.btn-style-border {
+	border: 0.1rem solid var(--primary-color);
+	background-color: transparent;
+	color: var(--primary-color);
+	box-shadow: 0 0.2rem 0.5rem rgba(183, 171, 255, 0.5);
+}
+
+.btn-style-border:hover {
+	color: #fff;
+	background-color: var(--primary-color);
+	text-transform: capitalize;
+}
+
+.foot {
+	color: #0b6efd;
+	font-weight: bold;
+}
+.foot:hover {
+	color: black;
+}
+.foot1 {
+	font-size: 1.3vw;
+}
+.fb {
+	padding-right: 1vw;
+}
+.twitter {
+	padding: 0vw 1vw;
+}
+.linkedin {
+	padding: 1vw;
+}
+.insta {
+	padding: 1vw;
+}
+.youtube {
+	padding: 1vw;
+}
+.fb:hover {
+	color: rgb(53, 105, 216);
+}
+.twitter:hover {
+	color: #1da1f2;
+}
+.insta:hover {
+	background: radial-gradient(
+		circle at 30% 107%,
+		#fdf497 0%,
+		#fdf497 5%,
+		#fd5949 45%,
+		#d6249f 60%,
+		#285aeb 90%
+	);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.linkedin:hover {
+	color: #0077b5;
+}
+.youtube:hover {
+	color: #ff0000;
+}
+@media (max-width: 767px) {
+	.foot1 {
+		font-size: 3.7vw;
+	}
+}
+.btn-back-to-top {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	display: none;
+	border-radius: 50%;
+	color: white;
+	background-color: #0d6efd;
+	border: none;
+	z-index: 10;
+}
+.btn-back-to-top:hover {
+	border: 0.2rem solid var(--primary-color);
+}
+.footer_color {
+  background: #97dcf1;
 }
