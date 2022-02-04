@@ -2,6 +2,8 @@ import React from "react";
 import Feature from "./UI/features/feature";
 import Contact from "./UI/contacts/contact";
 import styles from "./Cover.module.css";
+
+// import { useEffect } from "react";
 import Landing from "./UI/landing/landing";
 import Activities from "./UI/activities/activities";
 import Timeline from "./UI/timeline/timeline";
@@ -40,7 +42,7 @@ function Cover() {
                 value: "#fff",
               },
             },
-            fpsLimit: 120,
+            fpsLimit: 90,
             interactivity: {
               events: {
                 onClick: {

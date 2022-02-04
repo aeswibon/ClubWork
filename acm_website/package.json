@@ -22,6 +22,7 @@
         "react-parallax-tilt": "^1.5.90",
         "react-router-dom": "^6.2.1",
         "react-scripts": "^5.0.0",
+        "react-simple-typewriter": "^3.0.1",
         "react-tsparticles": "^1.39.3",
         "web-vitals": "^2.1.2"
     },
