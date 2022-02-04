@@ -2,33 +2,35 @@ import React from "react";
 import Feature from "./UI/features/feature";
 import Contact from "./UI/contacts/contact";
 import styles from "./Cover.module.css";
+import Landing from "./UI/landing/landing";
+import Activities from "./UI/activities/activities";
+import Timeline from "./UI/timeline/timeline";
 // import particlesJS from "../Components/UI/particles";
 // import {Link} from 'react-router-dom'
-import Particles from "react-tsparticles";
+// import Particles from "react-tsparticles";
 import Footer from "./UI/Footer";
 import Header from "./UI/Header";
 import GoTop from "./UI/GoTop";
 
 function Cover() {
-  const particlesInit = (main) => {
-    console.log(main);
+  // const particlesInit = (main) => {
+  //   console.log(main);
 
-    // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
-  };
+  //   // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
+  // };
 
-  const particlesLoaded = (container) => {
-    console.log(container);
-  };
+  // const particlesLoaded = (container) => {
+  //   console.log(container);
+  // };
 
   return (
     <React.Fragment>
       <Header />
       <GoTop />
-      <h1 className="text-center justify-content-center  main-heading fw-bold">
-        ACM COVER PAGE
-      </h1>
-      <div className={styles.particles}>
-        {/* <Particles
+
+      <div>
+      {/* <div className={styles.particles}>
+        <Particles
           id="tsparticles"
           init={particlesInit}
           loaded={particlesLoaded}
@@ -86,7 +88,7 @@ function Cover() {
                 enable: true,
                 outMode: "bounce",
                 random: false,
-                speed: 4,
+                speed: 2,
                 straight: false,
               },
               number: {
@@ -109,17 +111,27 @@ function Cover() {
             },
             detectRetina: true,
           }}
-        /> */}
+        />
+      </div> */}
+      <div>
+        <Landing />
       </div>
-
+      <div>
+        <Activities />
+      </div>
+      <div className="p-3 m-3">
+        <Timeline />
+      </div>
       <div className="p-3 m-3">
         <Feature />
       </div>
       <div>
         <Contact />
       </div>
-      <Footer />
+
       {/* <Link to="problem-list">ProblemSet</Link> */}
+    </div>
+    <Footer />
     </React.Fragment>
   );
 }
