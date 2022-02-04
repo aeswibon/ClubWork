@@ -2,6 +2,7 @@ import React from "react";
 import Feature from "./UI/features/feature";
 import Contact from "./UI/contacts/contact";
 import styles from "./Cover.module.css";
+import { useEffect } from "react";
 // import particlesJS from "../Components/UI/particles";
 // import {Link} from 'react-router-dom'
 import Particles from "react-tsparticles";
@@ -43,7 +44,7 @@ function Cover() {
                 value: "#fff",
               },
             },
-            fpsLimit: 120,
+            fpsLimit: 90,
             interactivity: {
               events: {
                 onClick: {
