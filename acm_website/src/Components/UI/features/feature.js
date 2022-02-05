@@ -17,28 +17,28 @@ function Feature() {
         <div data-aos="flip-up" className="m-3">
           <Card
             title="CODEPEN"
-            icon="fab fa-codepen"
+            icon="https://embed.lottiefiles.com/animation/16497"
             info="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque perferendis sit impedit ipsum ad quisquam optio beatae molestias, deserunt quidem temporibus quibusdam suscipit delectus maxime qui nulla corporis? Facere ab dignissimos aspernatur aliquam eveniet. "
           />
         </div>
         <div data-aos="flip-up" className="m-3">
           <Card
             title="DISCUSSION FORUM"
-            icon="fas fa-user-friends"
+            icon="https://embed.lottiefiles.com/animation/90514"
             info="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque perferendis sit impedit ipsum ad quisquam optio beatae molestias, deserunt quidem temporibus quibusdam suscipit delectus maxime qui nulla corporis aliquam"
           />
         </div>
         <div data-aos="flip-up" className="m-3">
           <Card
             title="INTERVIEW QUESTIONS "
-            icon="fas fa-comments" 
+            icon="https://embed.lottiefiles.com/animation/48429" 
             info="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque perferendis sit impedit ipsum ad quisquam optio beatae molestias, deserunt quidem temporibus quibusdam suscipit delectus maxime qui nulla corporis aliquam"
           />
         </div>
         <div data-aos="flip-up" className="m-3">
           <Card
             title="CODE COMPILER"
-            icon="fas fa-code"
+            icon="https://embed.lottiefiles.com/animation/63487"
             info="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque perferendis sit impedit ipsum ad quisquam optio beatae molestias, deserunt quidem temporibus quibusdam suscipit delectus maxime qui nulla corporis? Facere ab dignissimos aspernatur aliquam eveniet. "
           />
         </div>

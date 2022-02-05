@@ -14,6 +14,7 @@
         "aos": "^2.3.4",
         "axios": "^0.21.1",
         "brace": "^0.11.1",
+        "iframe-resizer-react": "^1.1.0",
         "moment": "^2.29.1",
         "react": "^17.0.2",
         "react-ace": "^9.5.0",
@@ -22,8 +23,8 @@
         "react-parallax-tilt": "^1.5.90",
         "react-router-dom": "^6.2.1",
         "react-scripts": "^5.0.0",
-        "react-simple-typewriter": "^3.0.1",
         "react-tsparticles": "^1.39.3",
+        "typewriter-effect": "^2.18.2",
         "web-vitals": "^2.1.2"
     },
     "scripts": {
