@@ -12,9 +12,9 @@ function Preloader() {
     <div id={preloader.preloader}>
       <div className="align-items-center justify-content-center text-center ">
          <img
-          src="./image/acmlogo.png"
+          src="https://i.postimg.cc/5N3w9xFT/acmlogo.png"
           className="m-5 "
-          data-aos="zoom-out" data-aos-delay="300" data-aos-duration="2000"
+          data-aos="zoom-in" data-aos-delay="300" data-aos-easing="ease-in-sine"
           style={{ height: "20vh",filter:" drop-shadow(5px 5px 5px #ffffff)" }}
           alt="logo-1"
         />
