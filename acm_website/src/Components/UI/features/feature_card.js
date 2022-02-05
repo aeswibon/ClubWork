@@ -2,13 +2,12 @@ import React,{useEffect} from "react";
 import Tilt from "react-parallax-tilt";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import IframeResizer from 'iframe-resizer-react'
 function Feature_card(props) {
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
-  function resizeIframe(obj) {
-    obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
-  }
+
   return (
     <>
       <Tilt
@@ -24,7 +23,7 @@ function Feature_card(props) {
           className="card  p-3 text text-white rounded bg-primary"
           style={{ width: "18rem"}}
          
-        ><iframe src={`${props.icon}`}  frameborder="0" title="animatedicons" scrolling="no" onLoad={resizeIframe} style={{pointerEvents:"none"}} > </iframe>
+        ><IframeResizer src={`${props.icon}`}  frameborder="0" title="animatedicons" scrolling="no"  style={{pointerEvents:"none"}} > </IframeResizer>
           
           <div className="card-body">
              <h4 className="card-title text-white" data-aos="fade-up">{props.title}</h4>
