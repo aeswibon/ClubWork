@@ -1,7 +1,7 @@
 import React from "react";
 import Feature from "./UI/features/feature";
 import Contact from "./UI/contacts/contact";
-import styles from "./Cover.module.css";
+// import styles from "./Cover.module.css";
 
 // import { useEffect } from "react";
 import Landing from "./UI/landing/landing";
