@@ -1,5 +1,5 @@
 #timeline {
-    background-color: #4e8be7;
+    background-color: rgb(90, 191, 216);
     max-width: 90%;
   }
   .wrapper {
@@ -52,7 +52,7 @@
   .row section .icon,
   .center-line .scroll-icon {
     position: absolute;
-    background: #4e8be7;
+    background: rgb(90, 191, 216);
     height: 40px;
     width: 40px;
     text-align: center;
