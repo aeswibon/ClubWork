@@ -8,12 +8,15 @@ function Preloader() {
     useEffect(() => {
         Aos.init({ duration: 2000 });
       }, []);
+      function resizeIframe(obj) {
+        obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+      }
   return <div id={preloader.preloader} >
 
 <div className='align-items-center justify-content-center text-center '   >
               
                 <img src='https://i.postimg.cc/bvDd48tV/logo-1.png' className='m-5' data-aos="zoom-in-down" style={{ height:"13vh" }}  alt='logo-1'/>
-             
+               <div> <iframe src="https://embed.lottiefiles.com/animation/89275"  frameborder="0" title="animatedicons" scrolling="no" onLoad={resizeIframe} style={{pointerEvents:"none"}} > </iframe></div>
                 <h1 className='text-bold text-white ' >
                 <span
                     style={{

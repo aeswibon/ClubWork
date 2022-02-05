@@ -6,6 +6,9 @@ function Feature_card(props) {
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+  }
   return (
     <>
       <Tilt
@@ -20,7 +23,8 @@ function Feature_card(props) {
         <div
           className="card  p-3 text text-white rounded bg-primary"
           style={{ width: "18rem"}}
-        ><h3 className="" data-aos="fade-down"><i className={`${props.icon} text-primary rounded-circle bg-white p-3 m-3 `} > </i> </h3>
+         
+        ><iframe src={`${props.icon}`}  frameborder="0" title="animatedicons" scrolling="no" onLoad={resizeIframe} style={{pointerEvents:"none"}} > </iframe>
           
           <div className="card-body">
              <h4 className="card-title text-white" data-aos="fade-up">{props.title}</h4>
