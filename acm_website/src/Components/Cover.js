@@ -11,7 +11,7 @@ import Timeline from "./UI/timeline/timeline";
 // import {Link} from 'react-router-dom'
 // import Particles from "react-tsparticles";
 import Footer from "./UI/Footer";
-import Header from "./UI/Header";
+import Header from "./UI/header/header";
 import GoTop from "./UI/GoTop";
 
 function Cover() {
