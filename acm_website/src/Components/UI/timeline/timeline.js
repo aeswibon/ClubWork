@@ -10,7 +10,7 @@ function Timeline() {
 
   return (
     <>
-      <section id="timeline" className=" mx-auto" style={{borderRadius: '20px'}}>
+      <section id="timeline" className=" mx-auto bg-primary" style={{borderRadius: '20px'}}>
         <div className="heading text-center py-5" data-aos="fade-up" data-aos-duration={2000}>Vertical Timeline</div>
         <div className="wrapper pb-5">
           <div className="center-line"/>
