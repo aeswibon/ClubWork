@@ -2,7 +2,7 @@ import React,{useEffect} from "react";
 import Tilt from "react-parallax-tilt";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import IframeResizer from 'iframe-resizer-react'
+
 function Feature_card(props) {
   useEffect(() => {
     Aos.init({ duration: 2000 });
@@ -20,14 +20,17 @@ function Feature_card(props) {
         glareBorderRadius={10}
       >
         <div
-          className="card  p-3 text text-white rounded bg-primary"
-          style={{ width: "18rem"}}
+          className="card  p-3 text  rounded "
+          style=
+        {{ width: "17rem", 
+           background:" #AEB8C4"
+        }}
          
-        ><IframeResizer src={`${props.icon}`}  frameborder="0" title="animatedicons" scrolling="no"  style={{pointerEvents:"none"}} > </IframeResizer>
+        ><iframe src={`${props.icon}`}  frameBorder="0" title="animatedicons" scrolling="no"  style={{pointerEvents:"none"}} > </iframe>
           
           <div className="card-body">
-             <h4 className="card-title text-white" data-aos="fade-up">{props.title}</h4>
-            <p className="card-text text-dark text-white ">{props.info}</p>
+             <h4 className="card-title text-black" data-aos="fade-up">{props.title}</h4>
+            <p className="card-text text-dark text-black ">{props.info}</p>
 
           </div>
         </div>

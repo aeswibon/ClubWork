@@ -13,14 +13,14 @@ function Contact() {
     <>
       <section className=" container p-3" id="contact">
         <div className="container">
-          <div className="row">
+          <div className="row"  style={{backgroundColor: "rgb(90, 191, 216)", borderRadius: "20px"}}>
             <div className="col-12 col-lg-10 mx-auto">
               <div className="row">
                 <div className="contact-leftside col-12 col-lg-5" data-aos="fade-right">
-                  <h1 className="main-heading fw-bold">
+                  <h1 className="main-heading fw-bold p-4">
                     Connect With Our <br /> ACM Team.
                   </h1>
-                  <p className="main-hero-para">
+                  <p className="main-hero-para p-3">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Deserunt eaque alias similique.
                   </p>
@@ -39,20 +39,20 @@ function Contact() {
 
                 {/* right side contact form  */}
                 <div className="contact-rightside col-12 col-lg-7 m-6">
-                  <form>
-                    <div className="d-none d-lg-block"> <br /><br /><br /><br /></div>
+                  <form className="p-3">
+                    <div className="d-none d-lg-block "> <br /><br /><br /><br /></div>
                     <div className="row" data-aos="fade-up" >
                       <div className="col-12 col-lg-6 contact-input-field">
-                        <input
+                        <input  
                           type="text"
                           name="firstName"
                           id=""
-                          className=" form-control m-3"
+                          className=" form-control mx-3 "
                           placeholder="First Name"
                         />
                       </div>
                       <div className="col-12 col-lg-6 contact-input-feild">
-                        <input
+                        <input  
                           type="text"
                           name="lastName"
                           id=""
@@ -63,7 +63,7 @@ function Contact() {
                     </div>
                     <div className="row"  data-aos="fade-up">
                       <div className="col-12 col-lg-6 contact-input-feild">
-                        <input
+                        <input  
                           type="text"
                           name="phone"
                           id=""
@@ -72,7 +72,7 @@ function Contact() {
                         />
                       </div>
                       <div className="col-12 col-lg-6 contact-input-feild">
-                        <input
+                        <input  
                           type="text"
                           name="email"
                           id=""
@@ -83,7 +83,7 @@ function Contact() {
                     </div>
                     <div className="row"  data-aos="fade-up">
                       <div className="col-12 contact-input-feild">
-                        <input
+                        <input  
                           type="text"
                           name="address"
                           id=""
@@ -95,7 +95,7 @@ function Contact() {
 
                     <div className="row"  data-aos="fade-up">
                       <div className="col-12 ">
-                        <input
+                        <input  
                           type="text"
                           name="message"
                           id=""
@@ -105,14 +105,14 @@ function Contact() {
                       </div>
                     </div>
                     <div  className="form-check form-checkbox-style">
-                      <input
+                      <input  
                          className="form-check-input"
                         type="checkbox"
                         value=""
                         id="flexCheckChecked"
                       />
                       <label
-                         className="form-check-label" data-aos="fade-up"
+                         className="form-check-label text-white" data-aos="fade-up"
                         
                       >
                         I agree that the ACM Team may contact me at the email
