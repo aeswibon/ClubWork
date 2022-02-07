@@ -74,8 +74,8 @@ const Header = () => {
         </nav>
       </section> */
       
-      <nav id="mainNavbar" className="navbar navbar-light navbar-expand-lg py-0 sticky-top align-items-center" data-aos="fade-down" data-aos-duration={2000}>
-        <a href="#" className="navbar-brand">
+      <nav id="mainNavbar" sticky="true" className="navbar navbar-light navbar-expand-lg py-0 sticky-top align-items-center" data-aos="fade-down" data-aos-duration={2000}>
+        <a href="/" className="navbar-brand">
           <img className="d-none d-lg-block ml-3" src="./image/logo.png" alt="acm" width="250px" />
           <img className="d-sm d-lg-none" src="./image/logo.png" alt="acm" width="200px" /></a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navLinks" aria-label="Toggle navigation"><span className="navbar-toggler-icon" />
@@ -95,10 +95,10 @@ const Header = () => {
               <a href="#contact" className="nav-link">Contact</a>
             </li>
             <li className="nav-item mx-auto">
-            <a className="btn btn1 mx-4 px-4 my-4 my-lg-2" href target="_blank" role="button">Login</a>
+            <a className="btn btn1 mx-4 px-4 my-4 my-lg-2" href="true" target="_blank" role="button">Login</a>
           </li>
           <li className="nav-item mx-auto">
-            <a className="btn btn2 px-4 my-lg-2" href target="_blank" role="button">Register</a>
+            <a className="btn btn2 px-4 my-lg-2" href="true" target="_blank" role="button">Register</a>
           </li>
           </ul>
           
