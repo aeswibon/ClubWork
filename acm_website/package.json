@@ -5,6 +5,7 @@
     "dependencies": {
         "@emotion/react": "^11.7.1",
         "@emotion/styled": "^11.6.0",
+        "@lottiefiles/lottie-player": "^1.5.5",
         "@lottiefiles/react-lottie-player": "^3.4.1",
         "@mui/icons-material": "^5.2.4",
         "@mui/material": "^5.2.6",
@@ -28,6 +29,7 @@
         "react-simple-typewriter": "^3.0.1",
         "react-tsparticles": "^1.39.3",
         "react-typewriter-effect": "^1.1.0",
+        "react-useanimations": "^2.0.8",
         "typewriter-effect": "^2.18.2",
         "web-vitals": "^2.1.2"
     },
