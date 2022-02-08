@@ -71,7 +71,7 @@ function Landing() {
             data-aos-duration={2000}
           >
             <iframe
-              autoplay
+              autoPlay
               loop title="homeicon" 
               className="d-none d-lg-block"
               src="https://embed.lottiefiles.com/animation/95348"
@@ -79,7 +79,7 @@ function Landing() {
             ></iframe>
             <div className="text-center ">
               <iframe
-                autoplay
+                autoPlay
                 loop title="homeicon"
                 className="d-block d-lg-none"
                 src="https://embed.lottiefiles.com/animation/95348"
