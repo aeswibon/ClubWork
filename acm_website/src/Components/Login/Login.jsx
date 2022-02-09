@@ -12,6 +12,9 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import Button from "@mui/material/Button";
 import "aos/dist/aos.css";
 import Aos from "aos";
+import { useDispatch } from "react-redux";
+import { login } from "../../app/userReducer";
+
 const LoginBox = (props) => {
   useEffect(() => {
     Aos.init({ duration: 1500 });
@@ -20,6 +23,7 @@ const LoginBox = (props) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [openAlert, setOpenAlert] = useState(false);
+  const dispatch = useDispatch();
 
   const handleAlertClose = (event, reason) => {
     if (reason === "clickaway") {
@@ -53,6 +57,9 @@ const LoginBox = (props) => {
       .then((res) => {
         // Login successful
         localStorage.setItem("accessToken", res.data.accessToken);
+        dispatch(login({
+          username: params.username,
+        }));
         window.location.href = "/home";
       })
       .catch((err) => setOpenAlert(true));
@@ -64,7 +71,7 @@ const LoginBox = (props) => {
         <div className="col-md-6  "  >
           <iframe
             data-aos="fade-up"
-  
+
             className="d-none d-sm-block"
             src="https://embed.lottiefiles.com/animation/53395"
             title=" loginlogo"
@@ -109,9 +116,12 @@ const LoginBox = (props) => {
                 variant="standard"
               />
             </Box>
+            <a className="text-center" href="/reset" >
+              Reset Password
+            </a>
             <br />
 
-            <Button  
+            <Button
               variant="outlined"
               sx={{ mx: "auto", width: 200 }}
               onClick={handleSubmit}
