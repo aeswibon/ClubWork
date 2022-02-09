@@ -11,6 +11,7 @@ import SendIcon from "@mui/icons-material/Send";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import Button from "@mui/material/Button";
 import "aos/dist/aos.css";
+
 import Aos from "aos";
 import { useDispatch } from "react-redux";
 import { login } from "../../app/userReducer";
@@ -97,7 +98,7 @@ const LoginBox = (props) => {
             <Box sx={{ display: "flex", alignItems: "flex-end" }} data-aos="fade-left">
               <AccountCircle sx={{ color: "action.active", mr: 1, my: 0.5 }} />
               <TextField
-                id="input-with-sx"
+                id="input-with"
                 onChange={(e) => setUsername(e.target.value)}
                 label="Username"
                 variant="standard"
@@ -120,17 +121,18 @@ const LoginBox = (props) => {
               Reset Password
             </a>
             <br />
+          
 
             <Button
               variant="outlined"
-              sx={{ mx: "auto", width: 200 }}
+             className="d-flex mx-5"
               onClick={handleSubmit}
               endIcon={<SendIcon />}
             >
               Login
             </Button>
 
-            <p className="text-center" >
+            <p className="mx-4" >
               New User?
               <button className="btn  btn-sm " onClick={props.register}>
                 <b>Register</b>
@@ -139,17 +141,16 @@ const LoginBox = (props) => {
           </div>
         </div>
       </div>
+    
       <Snackbar
         open={openAlert}
         autoHideDuration={6000}
-        onClose={handleAlertClose}
+        onClose={handleAlertClose} className="d-flex justify-content-center"
       >
-        <Alert
-          onClose={handleAlertClose}
-          severity="error"
-          sx={{ width: "100%" }}
-        >
-          Please check your username and password!
+        <Alert severity="error" className="fixed-top my-2 mx-5 "
+          onClose={handleAlertClose} >
+            Please check username or password!
+        
         </Alert>
       </Snackbar>
     </div>
