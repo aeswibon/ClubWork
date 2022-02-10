@@ -1,5 +1,5 @@
 import React from "react";
-import "./header.css"
+import "./header.css";
 import { useSelector, useDispatch } from "react-redux";
 import { selectUser, logout } from "../../../app/userReducer";
 const Header = () => {
