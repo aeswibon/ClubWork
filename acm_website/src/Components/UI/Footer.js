@@ -1,5 +1,4 @@
 import React from "react";
-import "../UI/landing/landing.css";
 const Footer = () => {
   return (
     <footer className="text-center text-lg-start text-white mt-5" style={{ backgroundColor: "#1a5b75" }}>
