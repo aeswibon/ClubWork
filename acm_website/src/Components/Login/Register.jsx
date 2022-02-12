@@ -86,7 +86,7 @@ const RegisterBox = (props) => {
         <div className="col-md-5 offset-md-2">
           <h3 data-aos="flip-up">
            
-            <b className="m-3 text-white"> Join Us! </b>
+            <b className="m-3 "> Join Us! </b>
           </h3>
 
           <Box
