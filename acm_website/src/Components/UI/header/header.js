@@ -2,12 +2,13 @@ import React from "react";
 import "./header.css";
 import { useSelector, useDispatch } from "react-redux";
 import { selectUser, logout } from "../../../app/userReducer";
+import { Link } from "react-router-dom";
+
 const Header = () => {
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
   const logOut = () => {
     dispatch(logout());
-    window.location.href = "/home";
   };
 
   return (
@@ -34,10 +35,10 @@ const Header = () => {
           {!user ? (
             <>
               <li className="nav-item mx-auto">
-                <a className="btn btn1 mx-4 px-4 my-4 my-lg-2" href="/login" target="_blank" role="button">Login</a>
+                <a className="btn btn1 mx-4 px-4 my-4 my-lg-2" href="/user/login" target="_blank" role="button">Login</a>
               </li>
               <li className="nav-item mx-auto">
-                <a className="btn btn2 px-4 my-lg-2" href="/register" target="_blank" role="button">Register</a>
+                <a className="btn btn2 px-4 my-lg-2" href="/user/register" target="_blank" role="button">Register</a>
               </li>
             </>
           ) : (
@@ -54,10 +55,10 @@ const Header = () => {
               <li className="nav-item  mx-auto">
                 <a href="/complier" className="nav-link">IDE</a>
               </li>
-              <li class="nav-item dropdown mx-auto">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#home" role="button" aria-expanded="false">Account</a>
-                <ul class="dropdown-menu">
-                  <li><button class="dropdown-item" onClick={logOut}>Logout</button></li>
+              <li className="nav-item dropdown mx-auto">
+                <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#home" role="button" aria-expanded="false">Account</a>
+                <ul className="dropdown-menu">
+                  <li><Link to="/home"><button className="dropdown-item" onClick={logOut}>Logout</button></Link></li>
                 </ul>
               </li>
             </>

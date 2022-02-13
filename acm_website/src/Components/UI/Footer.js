@@ -52,8 +52,8 @@ const Footer = () => {
               <hr className="mt-0 d-inline-block mx-auto" style={{ width: "60px", backgroundColor: "#fff", height: "2px" }} />
               <ul className="list-unstyled">
                 <li><i className="fas fa-home mr-3 mb-3"></i> ACM VNIT</li>
-                <li><i className="fas fa-envelope mr-3 mb-3"></i> proclubvnit @gmail.com</li>
-                <li><i className="fas fa-phone mr-3 mb-3"></i> +91 8830036413</li>
+                <li><i className="fas fa-envelope mr-3 mb-3"></i> <a href="mailto:proclubvnit@gmail.com" style={{ color: "#fff" }}>proclubvnit @gmail.com</a></li>
+                <li><i className="fas fa-phone mr-3 mb-3"></i> XXXX-XXXXX</li>
               </ul>
             </div>
           </div>
