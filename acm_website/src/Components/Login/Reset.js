@@ -12,15 +12,11 @@ import HowToRegIcon from "@mui/icons-material/HowToReg";
 import Button from "@mui/material/Button";
 import GppGoodIcon from "@mui/icons-material/GppGood";
 
-const RegisterBox = () => {
-  const [email, setEmail] = useState("");
-  const [username, setUsername] = useState("");
+const Reset = () => {
   const [password, setPassword] = useState("");
   const [password2, setPassword2] = useState("");
   const [openAlert, setOpenAlert] = useState(false);
-  const [alertMessage, setAlertMessage] = useState(
-    "Please check  Email / password!"
-  );
+  const [alertMessage, setAlertMessage] = useState("");
 
   const handleAlertClose = (event, reason) => {
     if (reason === "clickaway") {
@@ -31,28 +27,23 @@ const RegisterBox = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    var mailformat =
-      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if (
-      email.match(mailformat) &&
-      username &&
       password &&
       password2 &&
       password2 === password
     ) {
       const params = JSON.stringify({
-        username: username,
         password: password,
-        email: email,
       });
 
       axios
-        .post("/api/register", params)
-        .catch((err) => {
-          console.error(err);
-          setAlertMessage("Username or Email Already Taken!");
-          setOpenAlert(true);
-        });
+        .post("/api/login", params)
+        .then((res) => {
+          // Login successful
+          localStorage.setItem("accessToken", res.data.accessToken);
+          window.location.href = "/home";
+        })
+        .catch((err) => setOpenAlert(true));
     } else {
       setAlertMessage("Please check your Email or password!");
       setOpenAlert(true);
@@ -68,7 +59,7 @@ const RegisterBox = () => {
           <iframe
             className="d-none d-md-block"
             data-aos="fade-up"
-            src="https://embed.lottiefiles.com/animation/50124"
+            src="https://embed.lottiefiles.com/animation/76040"
             title=" register"
             height={"350rem"}
             style={{ pointerEvents: "none" }}
@@ -76,7 +67,7 @@ const RegisterBox = () => {
           <iframe
             className="d-sm-none d-block"
             data-aos="fade-up"
-            src="https://embed.lottiefiles.com/animation/50124"
+            src="https://embed.lottiefiles.com/animation/76040"
             title=" register"
             height={"200rem"}
             style={{ pointerEvents: "none" }}
@@ -85,25 +76,10 @@ const RegisterBox = () => {
         <div className="col-md-5 offset-md-2">
           <h3 data-aos="flip-up">
 
-            <b className="m-3 text-white"> Join Us! </b>
+            <b className="m-3 text-white"> Change Password </b>
           </h3>
 
-          <Box
-            sx={{ display: "flex", alignItems: "flex-end" }}
-            data-aos="fade-left"
-          >
-            <MailOutlineIcon sx={{ color: "action.active", mr: 1, my: 0.5 }} />
-            <TextField
-              id="input-with-sx"
-              onChange={(e) => setEmail(e.target.value)}
-              label="Email"
-              type="email"
-              variant="standard"
-            />
-          </Box>
-          <br />
-
-          <Box
+          {/* <Box
             sx={{ display: "flex", alignItems: "flex-end" }}
             data-aos="fade-left"
           >
@@ -112,13 +88,12 @@ const RegisterBox = () => {
             />
             <TextField
               id="input-with-sx"
-              onChange={(e) => setUsername(e.target.value)}
               label="Username"
               type="text"
               variant="standard"
             />
           </Box>
-          <br />
+          <br /> */}
 
           <Box
             sx={{ display: "flex", alignItems: "flex-end" }}
@@ -156,14 +131,8 @@ const RegisterBox = () => {
             onClick={handleSubmit}
             endIcon={<HowToRegIcon />}
           >
-            Register
+            Submit
           </Button>
-          <p className="mx-4">
-            Existing User?{" "}
-            <a className="btn btn-sm" href="/user/login">
-              <b>Login</b>
-            </a>
-          </p>
         </div>
       </div>
       <Snackbar
@@ -182,4 +151,4 @@ const RegisterBox = () => {
   </>);
 };
 
-export default RegisterBox;
+export default Reset;

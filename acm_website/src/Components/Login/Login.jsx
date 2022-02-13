@@ -16,7 +16,7 @@ import Aos from "aos";
 import { useDispatch } from "react-redux";
 import { login } from "../../app/userReducer";
 
-const LoginBox = (props) => {
+const LoginBox = () => {
   useEffect(() => {
     Aos.init({ duration: 1500 });
   }, []);
@@ -117,15 +117,15 @@ const LoginBox = (props) => {
                 variant="standard"
               />
             </Box>
-            <a className="text-center" href="/reset" >
-              Reset Password
+            <a className="d-flex justify-content-center mt-1" href="/user/forgot">
+              Forgot Password
             </a>
             <br />
-          
+
 
             <Button
               variant="outlined"
-             className="d-flex mx-5"
+              className="d-flex mx-5"
               onClick={handleSubmit}
               endIcon={<SendIcon />}
             >
@@ -134,14 +134,14 @@ const LoginBox = (props) => {
 
             <p className="mx-4" >
               New User?
-              <button className="btn  btn-sm " onClick={props.register}>
+              <a className="btn  btn-sm " href="/user/register">
                 <b>Register</b>
-              </button>
+              </a>
             </p>
           </div>
         </div>
       </div>
-    
+
       <Snackbar
         open={openAlert}
         autoHideDuration={6000}
@@ -149,8 +149,8 @@ const LoginBox = (props) => {
       >
         <Alert severity="error" className="fixed-top my-2 mx-5 "
           onClose={handleAlertClose} >
-            Please check username or password!
-        
+          Please check username or password!
+
         </Alert>
       </Snackbar>
     </div>
