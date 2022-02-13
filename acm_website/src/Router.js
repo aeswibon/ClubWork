@@ -7,9 +7,12 @@ import OnlineCompiler from "./Components/online-compiler/OnlineCompiler";
 import LoginPage from "./Components/Login/LoginPage";
 import Home from "./Components/Login/Home";
 // import PrivateRoute from "./Components/auth/PrivateRoute";
-import Reset from "./Components/Login/Reset Password";
+import Reset from "./Components/Login/Reset";
+import Forgot from "./Components/Login/Forgot";
 import HomeScreen from "./Components/Codepen/HomeScreen";
 import Editor from "./Components/Codepen/Editor";
+import RegisterBox from "./Components/Login/Register";
+import LoginBox from "./Components/Login/Login";
 
 function SiteRouter() {
   return (
@@ -28,8 +31,13 @@ function SiteRouter() {
         />
         <Route path="/codepen" element={<HomeScreen />} />
         <Route path="/codepen/projects/:id" exact element={<Editor />} />
+        <Route path="/user" exact element={<LoginPage />} >
+          <Route path="login" exact element={<LoginBox />} />
+          <Route path="register" exact element={<RegisterBox />} />
+          <Route path="reset" exact element={<Reset />} />
+          <Route path="forgot" exact element={<Forgot />} />
+        </Route>
         <Route path="/compiler" exact element={<OnlineCompiler />} />
-        <Route path="/reset" exact element={<Reset />} />
         {/* <Route path="/problem-details/:id" exact element={<ProblemDetails />} /> */}
         {/* <Route path="/problem-list" exact element={<ProblemList />} /> */}
       </Routes>
