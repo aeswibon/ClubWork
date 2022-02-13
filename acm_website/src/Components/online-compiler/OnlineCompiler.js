@@ -5,6 +5,11 @@ import React, {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
 import moment from "moment";
 import AceEditor from "react-ace";
+import { styled } from '@mui/material/styles';
+import MuiAccordion from '@mui/material/Accordion';
+import KeyboardDoubleArrowDownSharpIcon from '@mui/icons-material/KeyboardDoubleArrowDownSharp';
+import MuiAccordionSummary from '@mui/material/AccordionSummary';
+import Preloader from "./preloader";
 // import brace from "brace";
 //languages
 import "brace/mode/javascript";
@@ -32,8 +37,8 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Typography from "@mui/material/Typography";
 import Backdrop from "@mui/material/Backdrop";
+import ButtonGroup from "@mui/material/ButtonGroup";
 import CircularProgress from "@mui/material/CircularProgress";
-
 // const Item = styled(Paper)(({theme}) => ({
 //     ...theme.typography.body2,
 //     padding: theme.spacing(1),
@@ -41,6 +46,38 @@ import CircularProgress from "@mui/material/CircularProgress";
 //     color: theme.palette.text.secondary,
 // }));
 
+const Accordion = styled((props) => (
+    <MuiAccordion disableGutters elevation={0} square {...props} />
+  ))
+  (({ theme }) => ({
+    border: `1px solid ${theme.palette.divider}`,
+    '&:not(:last-child)': {
+      borderBottom: 0,
+    },
+    '&:before': {
+      display: 'none',
+    },
+  }))
+  ;
+  const AccordionSummary = styled((props) => (
+    <MuiAccordionSummary
+      expandIcon={<KeyboardDoubleArrowDownSharpIcon sx={{ fontSize: '2rem' , color:"red"}} />}
+      {...props}
+    />
+  ))(({ theme }) => ({
+    backgroundColor:
+      theme.palette.mode === 'dark'
+        ? 'rgba(255, 255, 255, .05)'
+        : 'rgba(0, 0, 0, .03)',
+    flexDirection: 'row-reverse',
+    '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
+      transform: 'rotate(90deg)',
+    },
+    '& .MuiAccordionSummary-content': {
+      marginLeft: theme.spacing(1),
+    },
+  }));
+  
 function OnlineCompiler() {
     let params = useParams();
 
@@ -54,7 +91,53 @@ function OnlineCompiler() {
     const [status, setStatus] = useState(null);
     const [jobDetails, setJobDetails] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
+    const [loading, setLoading] = useState(false);
+    useEffect(() => {
+        setLoading(true);
+        setTimeout(() => {
+        setLoading(false);
+        }, 3000);
+    }, []);
 
+      const [expanded, setExpanded] = React.useState('panel1');
+
+      const handleChange = (panel) => (event, newExpanded) => {
+        setExpanded(newExpanded ? panel : false);
+      };
+    const Function1 = () => {
+        let x = document.getElementById("input");
+        let y = document.getElementById("output");
+        let a = document.getElementById("btn1");
+        let b = document.getElementById("btn2");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+            y.style.display = "none";
+          } 
+        a.style.backgroundColor = "#f54242";
+        a.style.color = "black";
+        b.style.backgroundColor = "#1976d2";
+        b.style.color = "white";
+      }
+
+      
+      const Function2 = () => {
+        let z = document.getElementById("output");
+        let w = document.getElementById("input");
+        let c = document.getElementById("btn2");
+        let d = document.getElementById("btn1");
+        if (z.style.display === "none") {
+            z.style.display = "block";
+            w.style.display = "none";
+          }
+        c.style.backgroundColor = "#f54242";
+        c.style.color = "black";
+        d.style.backgroundColor = "#1976d2";
+        d.style.color = "white";
+        
+      }
+    
+
+   
     useEffect(() => {
         setCode(stubs[language]);
     }, [language]);
@@ -149,50 +232,66 @@ function OnlineCompiler() {
     };
 
     return (
+        loading ? (
+            <>
+            <Preloader/>
+            </>
+            ):
         <div style={{backgroundColor: "#F7DBD7"}}>
-            <Typography
-                variant="h3"
-                // component="Box"
-                display="flex"
-                justifyContent="center"
-                padding={1}
-                sx={{
-                    backgroundColor: "#9CC0E7",
-                    // fontFamily: "Poppins",
-                    // fontStyle: "normal",
-                }}>
-                Online Compiler
-            </Typography>
+            
             <Backdrop sx={{color: "#fff", zIndex: theme => theme.zIndex.drawer + 1}} open={isLoading}>
                 <CircularProgress color="inherit" />
             </Backdrop>
             <Box sx={{flexGrow: 1}}>
                 <Grid container spacing="0.2vh">
-                    <Grid item xs={12} sm={7}>
+                    <Grid item xs={12}>
                         <Box
                             display="flex"
                             justifyContent="center"
                             sx={{
                                 padding: 0.7,
-                                backgroundColor: "#F7DBD7",
+                                background: 'linear-gradient(to right, #e3f4f8, #adecfa)',
                                 gap: "20px",
                             }}>
-                            <FormControl size="small">
+                            <Typography
+                // variant="h6"
+                // component="Box"
+                display="flex"
+                justifyContent="center"
+                color="#005580"
+                padding={1}
+                fontSize="large"
+                sx={{
+                    fontFamily: "Lato",
+                    // fontStyle: "normal",
+                }}>
+                 <Box
+                    component="img"
+                    sx={{
+                    height: 30,
+                    width: 35,
+                    }}
+                    src="./image/compiler.png"
+                />
+                Online Compiler
+            </Typography>
+                            <FormControl size="small" style={{marginTop:'5px'}}>
                                 <Select
                                     value={theme}
                                     onChange={e => {
                                         setTheme(e.target.value);
                                     }}>
-                                    <MenuItem value="monokai">monokai</MenuItem>
-                                    <MenuItem value="twilight">twilight</MenuItem>
-                                    <MenuItem value="dracula">dracula</MenuItem>
-                                    <MenuItem value="xcode">xcode</MenuItem>
-                                    <MenuItem value="github">github</MenuItem>
-                                    <MenuItem value="eclipse">eclipse</MenuItem>
-                                    <MenuItem value="terminal">terminal</MenuItem>
+                                    <MenuItem style={{textTransform:"capitalize"}} value="monokai">Monokai</MenuItem>
+                                    <MenuItem style={{textTransform:"capitalize"}}  value="twilight">Twilight</MenuItem>
+                                    <MenuItem style={{textTransform:"capitalize"}}  value="dracula">Dracula</MenuItem>
+                                    <MenuItem style={{textTransform:"capitalize"}}  value="xcode">Xcode</MenuItem>
+                                    <MenuItem style={{textTransform:"capitalize"}}  value="github">Github</MenuItem>
+                                    <MenuItem style={{textTransform:"capitalize"}}  value="eclipse">Eclipse</MenuItem>
+                                    <MenuItem style={{textTransform:"capitalize"}}  value="terminal">Terminal</MenuItem>
                                 </Select>
                             </FormControl>
-                            <FormControl size="small">
+                            
+                            <FormControl size="small" style={{marginTop:'5px'}}> 
                                 <Select
                                     value={language}
                                     onChange={e => {
@@ -222,12 +321,28 @@ function OnlineCompiler() {
                                     <MenuItem value="java">Java</MenuItem>
                                 </Select>
                             </FormControl>
-                            <Button onClick={setDefaultLanguage} variant="contained" size="small">
+                            <Button onClick={setDefaultLanguage} style={{backgroundColor:"#f54242"}} className="d-none d-lg-block" variant="contained" size="small">
                                 Set Default
                             </Button>
-                            <Button onClick={handleSubmit} variant="contained" size="small">
+                            <Button onClick={handleSubmit} className="d-none d-lg-block" variant="contained" size="small">
                                 Submit Code
                             </Button>
+                        </Box>
+
+                        <Box display="flex"
+                            justifyContent="center"
+                            sx={{
+                                padding: 0.7,
+                                background: 'linear-gradient(to right, #e3f4f8, #adecfa)',
+                                gap: "20px",
+                            }}>
+                            
+                        <Button onClick={setDefaultLanguage} className="d-block d-lg-none" variant="contained" size="medium" style={{backgroundColor:"#f54242"}}>
+                            Set Default
+                        </Button>
+                        <Button onClick={handleSubmit}  className="d-block d-lg-none" variant="contained" size="medium">
+                            Submit Code
+                        </Button>
                         </Box>
                         <AceEditor
                             placeholder="//Your Code Here"
@@ -249,23 +364,35 @@ function OnlineCompiler() {
                                 tabSize: 4,
                             }}
                             width="100%"
-                            height="100.2vh"
+                            height="80vh"
                         />
                     </Grid>
-                    <Grid item xs={12} sm={5}>
-                        <Box
-                            display="flex"
+
+                    
+                        
+                        <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+                        
+                        <Box display="flex"
                             justifyContent="center"
+                            margin="auto"
                             sx={{
-                                padding: 0.95,
-                                backgroundColor: "#F7DBD7",
+                                // padding: 0.7,
+                                background: '#F7DBD7',
                                 gap: "20px",
                             }}>
-                            <Button onClick={handleClearInput} variant="contained" size="medium">
-                                Clear Input
-                            </Button>
+                        <ButtonGroup variant="contained" size="large" className=""  aria-label="outlined primary button group">
+                            <Button style={{width:"30vw"}} onMouseEnter={{color:"black"}} id="btn1" onClick={Function1}>Add Input</Button>
+                            <Button style={{width:"30vw",backgroundColor:"#f54242"}} id="btn2" onClick={Function2}>Output</Button>
+                            <Button style={{width:"30vw",marginRight:"50px"}} onClick={handleClearInput}>Clear Input</Button>
+                            <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
+                            </AccordionSummary>
+                        </ButtonGroup>
+                        
+                        
                         </Box>
-                        <Box display="flex" justifyContent="flex-end" flexDirection="column" gap="0.2vh">
+                        <Grid container >
+                        <Grid item sm={12}>
+                        <div className="" style={{display:"none"}} id="input">
                             <AceEditor
                                 placeholder="//Input"
                                 mode={langForEditor}
@@ -284,9 +411,13 @@ function OnlineCompiler() {
                                     tabSize: 4,
                                     useWorker: false,
                                 }}
-                                width="100%"
+                                width="100vw"
                                 height="50vh"
+                                
                             />
+                            </div>
+                            </Grid>
+                            <Grid  sm={12} className="" id="output">
                             <AceEditor
                                 placeholder="//Output"
                                 theme={theme}
@@ -304,14 +435,17 @@ function OnlineCompiler() {
                                     useWorker: false,
                                     readOnly: true,
                                 }}
-                                width="100%"
+                                width="100vw"
                                 height="50vh"
                                 editorProps={{readOnly: true}}
                             />
-                        </Box>
+                            </Grid>
                     </Grid>
-                </Grid>
+                    </Accordion>
+                    </Grid>
+                    
             </Box>
+           
         </div>
     );
 }
