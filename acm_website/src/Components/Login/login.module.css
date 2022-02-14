@@ -13,19 +13,20 @@
     padding-top: 4rem;
     padding: 2rem; margin: 2rem;
     border-radius: 32px;
-    background: linear-gradient(145deg, #3587da, #ffffff);
-
+    background: linear-gradient(90deg, #3587da, #ffffff);
     filter: drop-shadow(5px 5px 5px rgb(78, 76, 76));
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+
 }
 #RegisterBox{
     padding-top: 4rem;
     margin: 2rem;
+  
     padding: 2rem;
+    display: flexbox;
+    flex-wrap: wrap;
+    flex-direction: row;
     border-radius: 32px;
-    background: linear-gradient(145deg, #3587da, #ffffff);
+    background: linear-gradient(90deg, #3587da, #ffffff);
     filter: drop-shadow(5px 5px 5px rgb(78, 76, 76));
     box-shadow:  31px 31px 62px #b6b4b4,
                  -5px -5x 62px #ffffff;

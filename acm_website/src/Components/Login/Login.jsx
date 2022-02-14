@@ -92,7 +92,7 @@ const LoginBox = () => {
           <div>
             <h3 data-aos="flip-up">
               {" "}
-              <b className="text-white"> Welcome Back! </b>
+              <b > Welcome Back! </b>
             </h3>
 
             <Box sx={{ display: "flex", alignItems: "flex-end" }} data-aos="fade-left">
