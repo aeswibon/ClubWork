@@ -13,7 +13,10 @@ import Button from "@mui/material/Button";
 import "aos/dist/aos.css";
 
 import Aos from "aos";
-const LoginBox = (props) => {
+import { useDispatch } from "react-redux";
+import { login } from "../../app/userReducer";
+
+const LoginBox = () => {
   useEffect(() => {
     Aos.init({ duration: 1500 });
   }, []);
@@ -21,6 +24,7 @@ const LoginBox = (props) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [openAlert, setOpenAlert] = useState(false);
+  const dispatch = useDispatch();
 
   const handleAlertClose = (event, reason) => {
     if (reason === "clickaway") {
@@ -54,6 +58,9 @@ const LoginBox = (props) => {
       .then((res) => {
         // Login successful
         localStorage.setItem("accessToken", res.data.accessToken);
+        dispatch(login({
+          username: params.username,
+        }));
         window.location.href = "/home";
       })
       .catch((err) => setOpenAlert(true));
@@ -65,7 +72,7 @@ const LoginBox = (props) => {
         <div className="col-md-6  "  >
           <iframe
             data-aos="fade-up"
-  
+
             className="d-none d-sm-block"
             src="https://embed.lottiefiles.com/animation/53395"
             title=" loginlogo"
@@ -110,12 +117,15 @@ const LoginBox = (props) => {
                 variant="standard"
               />
             </Box>
+            <a className="d-flex justify-content-center mt-1" href="/user/forgot">
+              Forgot Password
+            </a>
             <br />
-          
 
-            <Button  
+
+            <Button
               variant="outlined"
-             className="d-flex mx-5"
+              className="d-flex mx-5"
               onClick={handleSubmit}
               endIcon={<SendIcon />}
             >
@@ -124,14 +134,14 @@ const LoginBox = (props) => {
 
             <p className="mx-4" >
               New User?
-              <button className="btn  btn-sm " onClick={props.register}>
+              <a className="btn  btn-sm " href="/user/register">
                 <b>Register</b>
-              </button>
+              </a>
             </p>
           </div>
         </div>
       </div>
-    
+
       <Snackbar
         open={openAlert}
         autoHideDuration={6000}
@@ -139,8 +149,8 @@ const LoginBox = (props) => {
       >
         <Alert severity="error" className="fixed-top my-2 mx-5 "
           onClose={handleAlertClose} >
-            Please check username or password!
-        
+          Please check username or password!
+
         </Alert>
       </Snackbar>
     </div>
