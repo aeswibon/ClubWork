@@ -1,3 +1,3 @@
-# ECELL PROJECTS
-- [x] NEO
-- [x] MUN
+# ECELL Entre MUN Project (HTML/CSS)
+✅ Added Timeline Component
+ 
