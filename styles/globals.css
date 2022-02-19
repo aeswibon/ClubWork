@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .ecell_logo_black {
+    background-image: url("../images/E-Cell_black.png");
+  }
+
+  .ecell_logo_white {
+    background-image: url("../images/E-Cell_white.png");
+  }
+
+  .neo_logo_black {
+    background-image: url("../images/neo_logo_black.jpg");
+  }
+
+  .neo_logo_white {
+    background-image: url("../images/neo_logo_white.png");
+  }
+
+  .bg_contact {
+    background-image: url("../images/back.jpg");
+  }
+
+  .line_left {
+    left: 50%;
+    border: 0px 0px 0px 2px dashed #ff8605;
+    border-radius: 1%;
+  }
+
+  .line_right {
+    right: 50%;
+    border: 0px 2px 0px 0px solid #ff8605;
+    border-radius: 1%;
+  }
+
+  .goTopHidden {
+    display: none;
+  }
+
+  .goTop {
+    display: block;
+  }
+
+  .insta:hover {
+    background: radial-gradient(
+      circle at 30% 107%,
+      #fdf497 0%,
+      #fdf497 5%,
+      #fd5949 45%,
+      #d6249f 60%,
+      #285aeb 90%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

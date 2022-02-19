@@ -1,0 +1,31 @@
+{
+  "name": "ecell_neo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.4.1",
+    "aos": "^2.3.4",
+    "jshint": "^2.13.1",
+    "next": "12.1.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-responsive-carousel": "^3.2.21",
+    "react-slick": "^0.28.1",
+    "slick-carousel": "^1.8.1",
+    "tailwind-scrollbar-hide": "^1.0.3"
+  },
+  "devDependencies": {
+    "@heroicons/react": "^1.0.4",
+    "autoprefixer": "^10.3.7",
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.2",
+    "postcss": "^8.3.9",
+    "tailwindcss": "^2.2.16"
+  }
+}
